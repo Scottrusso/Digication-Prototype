@@ -28,8 +28,10 @@
     <div class="diagonal-resizer-bottom-right" mwlResizeHandle [resizeEdges]="{ bottom: true, right: true }"></div>
 
     <div class="menu" *ngIf="selectedModuleIndex === i">
-      <button (click)="editModule(i)"></button>
-      <button (click)="deleteModule(i)">Delete</button>
+      <button (click)="editModule(i)"><mat-icon>edit</mat-icon></button>
+      <button (click)="openModuleSettings(i)"><mat-icon>settings</mat-icon></button>
+      <button (click)="moveModule(i)"><mat-icon>open_with</mat-icon></button>
+      <button (click)="deleteModule(i)"><mat-icon>delete</mat-icon></button>
     </div>
 
     <div *ngIf="module.type === 'textarea'">

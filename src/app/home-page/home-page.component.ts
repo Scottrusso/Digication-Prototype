@@ -28,9 +28,19 @@ export class HomePageComponent {
 
   }
 
+  openModuleSettings(index: number){
+
+  }
+
+  moveModule(index:number){
+
+  }
+
   deleteModule(index: number){
 
   }
+
+  
 
   selectModule(index: number){
     this.selectedModuleIndex = index;
