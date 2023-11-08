@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FormsModule } from '@angular/forms';
 import { ResizableModule } from 'angular-resizable-element';
-import {CdkDrag} from '@angular/cdk/drag-drop';
+import {CdkDrag, CdkDragHandle} from '@angular/cdk/drag-drop';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -23,6 +23,7 @@ import { MatIconModule } from '@angular/material/icon';
     CdkDrag,
     BrowserAnimationsModule,
     MatIconModule,
+    CdkDragHandle
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -49,6 +49,10 @@
     vertical-align: middle;
   }
 
+  .moveModule{
+    cursor: move;
+  }
+
   input[type="textarea"] {
     width: 100%;
     height: 100%;

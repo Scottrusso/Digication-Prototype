@@ -3,7 +3,7 @@
 <body>
 <button class="addModule" (click)="addModule()">Add Module</button>
 <div class="modules">
-  <div *ngFor="let module of modules; let i = index" class="module" #resizable cdkDrag mwlResizable
+  <div *ngFor="let module of modules; let i = index" class="module" cdkDrag #resizable mwlResizable
   [ngStyle]="styles[i]"
   [validateResize]="validate" 
   [enableGhostResize]="true" 
@@ -24,7 +24,7 @@
     <div class="menu" *ngIf="selectedModuleIndex === i">
       <button (click)="editModule(i)"><mat-icon>edit</mat-icon></button>
       <button (click)="openModuleSettings(i)"><mat-icon>settings</mat-icon></button>
-      <button (click)="moveModule(i)"><mat-icon>open_with</mat-icon></button>
+      <button class="moveModule" (click)="moveModule(i)" cdkDragHandle><mat-icon>open_with</mat-icon></button>
       <button (click)="deleteModule(i)"><mat-icon>delete</mat-icon></button>
     </div>
 
