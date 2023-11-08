@@ -1,0 +1,27 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2d2f30;
+    color: #ffffff; 
+    padding: 10px;
+  }
+  
+  .banner {
+    display:flex;
+    align-items: center;
+    height: 100px;
+    padding: 10px;
+  }
+  .icon {
+    text-align: left;
+    font-size: 50px;
+    color:white;
+    background-color: rgb(216, 110, 4);
+    width: 35px;
+    margin-right: 10px;
+  }
+  .banner h1 {
+    flex:1;
+  }
