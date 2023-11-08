@@ -1,0 +1,10 @@
+<h1>My Angular Page</h1>
+<button (click)="addModule()">Add Module</button>
+<div class="modules">
+  <div *ngFor="let module of modules" class="module" appDraggable appResizable>
+    <div *ngIf="module.type === 'textbox'">
+      <input type="text" [(ngModel)]="module.content" placeholder="Enter text"/>
+    </div>
+    <!-- You can add similar logic for images if needed -->
+  </div>
+</div>

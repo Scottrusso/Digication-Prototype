@@ -1,0 +1,16 @@
+.modules {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+  .module {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    position: relative;
+  }
