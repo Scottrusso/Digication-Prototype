@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FormsModule } from '@angular/forms';
 import { ResizableModule } from 'angular-resizable-element';
-import { DragAndDropModule } from 'angular-draggable-droppable';
+import {CdkDrag} from '@angular/cdk/drag-drop';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { DragAndDropModule } from 'angular-draggable-droppable';
     AppRoutingModule,
     FormsModule,
     ResizableModule,
-    DragAndDropModule,
+    CdkDrag,
+    BrowserAnimationsModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

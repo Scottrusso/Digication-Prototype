@@ -1,10 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/83b5e2e40d.js" crossorigin="anonymous"></script>
+</head>
+
 <h1>My Angular Page</h1>
-<button (click)="addModule()">Add Module</button>
+
+<body>
+<button class="addModule" (click)="addModule()">Add Module</button>
 <div class="modules">
-  <div *ngFor="let module of modules" class="module" appDraggable appResizable>
-    <div *ngIf="module.type === 'textbox'">
-      <input type="text" [(ngModel)]="module.content" placeholder="Enter text"/>
+  <div *ngFor="let module of modules; let i = index" class="module" #resizable cdkDrag mwlResizable
+  [ngStyle]="styles[i]"
+  [validateResize]="validate" 
+  [enableGhostResize]="true" 
+  (resizeEnd)="onResizeEnd($event, i)"
+  [resizeSnapGrid]="{ left: 50, right: 50 }"
+
+  (click)="selectModule(i)">
+
+    <div class="resize-handle-top" mwlResizeHandle [resizeEdges]="{ top: true }"></div>
+    <div class="resize-handle-left" mwlResizeHandle [resizeEdges]="{ left: true }"></div>
+    <div class="resize-handle-right" mwlResizeHandle [resizeEdges]="{ right: true }"></div>
+    <div class="resize-handle-bottom" mwlResizeHandle [resizeEdges]="{ bottom: true }"></div>
+    <div class="diagonal-resizer-top-left" mwlResizeHandle [resizeEdges]="{ top: true, left: true }"></div>
+    <div class="diagonal-resizer-top-right" mwlResizeHandle [resizeEdges]="{ top: true, right: true }"></div>
+    <div class="diagonal-resizer-bottom-left" mwlResizeHandle [resizeEdges]="{ bottom: true, left: true }"></div>
+    <div class="diagonal-resizer-bottom-right" mwlResizeHandle [resizeEdges]="{ bottom: true, right: true }"></div>
+
+    <div class="menu" *ngIf="selectedModuleIndex === i">
+      <button (click)="editModule(i)"></button>
+      <button (click)="deleteModule(i)">Delete</button>
     </div>
-    <!-- You can add similar logic for images if needed -->
+
+    <div *ngIf="module.type === 'textarea'">
+      <textarea [(ngModel)]="module.content" placeholder="Enter text" 
+      [ngStyle]="textStyles[i]" #textbox></textarea>
+    </div>
   </div>
 </div>
+
+</body>
+</html>

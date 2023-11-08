@@ -3,14 +3,118 @@
     flex-wrap: wrap;
   }
   
-  button {
+  .addModule {
     position: absolute;
     bottom: 20px;
     right: 20px;
   }
   .module {
-    border: 1px solid #ccc;
     padding: 10px;
     background-color: #f9f9f9;
     position: relative;
+    top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 190px;
+    height: 55px;
+    border: dotted 1px #121621;
+    color: #121621;
+    margin: auto;
+    box-sizing: border-box;
   }
+
+  .menu {
+    display: flex;
+    position: absolute;
+    right: -30px;
+    top: 0;
+    width: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1;
+    flex-direction: column;
+  }
+
+  .menu button {
+    margin: 1px;
+  }
+
+  input[type="textarea"] {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent; 
+    text-align: center; 
+    vertical-align: top; 
+    line-height: 1; 
+    white-space: pre-wrap;
+  }
+
+.resize-handle-top,
+.resize-handle-bottom {
+  position: absolute;
+  height: 10px;
+  cursor: row-resize;
+  width: 100%;
+}
+
+.resize-handle-top {
+  top: 0;
+}
+
+.resize-handle-bottom {
+  bottom: 0;
+}
+
+.resize-handle-left,
+.resize-handle-right {
+  position: absolute;
+  height: 100%;
+  cursor: col-resize;
+  width: 10px;
+}
+
+.resize-handle-left {
+  left: 0;
+}
+
+.resize-handle-right {
+  right: 0;
+}
+
+.diagonal-resizer-top-right {
+  top: 0;
+  right: 0;
+  cursor: ne-resize;
+}
+
+.diagonal-resizer-bottom-left {
+  left: 0;
+  bottom: 0;
+  cursor: sw-resize;
+}
+
+.diagonal-resizer-bottom-right {
+  right: 0;
+  bottom: 0;
+  cursor: se-resize;
+}
+
+.diagonal-resizer-top-left {
+  left: 0;
+  top: 0;
+  cursor: nw-resize;
+}
+
+.diagonal-resizer-top-left,
+.diagonal-resizer-top-right,
+.diagonal-resizer-bottom-left,
+.diagonal-resizer-bottom-right {
+  width: 10px; 
+  height: 10px; 
+  position: absolute;
+  background-color: #434446; 
+  border-radius: 50%;
+}
