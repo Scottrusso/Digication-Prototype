@@ -37,7 +37,8 @@ export class HomePageComponent {
   }
 
   deleteModule(index: number){
-
+    const moduleToDelete = this.modules[index];
+    this.modules.splice(index, 1);
   }
 
   

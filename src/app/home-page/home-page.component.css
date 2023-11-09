@@ -25,7 +25,7 @@
   }
 
   .menu {
-    display: flex;
+    display: hide;
     position: absolute;
     right: -30px;
     top: 0;
@@ -51,6 +51,10 @@
 
   .moveModule{
     cursor: move;
+  }
+
+  textarea {
+    resize:none;
   }
 
   input[type="textarea"] {
